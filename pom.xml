@@ -27,9 +27,8 @@
     <dependencies>
 
         <dependency>
-            <groupId>com.mirae</groupId>
-            <artifactId>investment-core</artifactId>
-            <version>1.0.0</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <dependency>
