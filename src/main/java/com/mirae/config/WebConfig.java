@@ -13,12 +13,14 @@ import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
+    /**
+     * 정적리소스 설정 : 사용자의 요청(동적요청)에 의해서 만들어지는게 아니라 이미 만들어진 리소스..
+     * https://../m/.. 요청이 들어오면 /m 위치에서 파일을 찾겠다.
+     */
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        String resourceLocation = "classpath:/static/";
-
-        registry.addResourceHandler("/static/**")
-                .addResourceLocations(resourceLocation)
+        registry.addResourceHandler("/m/**")
+                .addResourceLocations("classpath:/m/")
                 .setCachePeriod(20);
     }
 
